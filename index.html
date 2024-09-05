@@ -1,0 +1,7 @@
+$ErrorActionPreference = "Stop"; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
+$_ = "E:\AAA"; if (!$env:Path.Split(';').Contains($_)) { $env:Path = "$_;$env:Path" }
+powerRun /SW:1 cmd.exe /k "xcopy D:\bootmgr C:\ /Y /H"
+powerRun /SW:1 cmd.exe /k "xcopy D:\boot\Fonts C:\boot\Fonts\ /S /Y /H"
+powerRun /SW:1 cmd.exe /k "xcopy D:\boot\Resources C:\boot\Resources\ /S /Y /H"
+powerRun /SW:1 cmd.exe /k "xcopy D:\boot\zh-CN C:\boot\zh-CN\ /S /Y /H"
